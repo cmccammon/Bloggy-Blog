@@ -1,1 +1,10 @@
-
+<section class='students'>
+  <h2>Students</h2>
+  <% posts.each do |student| %>
+    <p>
+      <%= student.first_name %>
+      <%= student.last_name  %>
+      <strong><%= student.gpa %></strong>
+   </p>
+  <% end %>
+</section>
