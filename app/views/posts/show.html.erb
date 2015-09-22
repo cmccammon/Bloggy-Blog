@@ -3,5 +3,10 @@
 <strong>
   Comments:
 </strong>
-<p> <%= posts.comments %></p>
+<ul>
+  <% posts.comments.each do |com| %>
+    <li><%= com.message %></li>
+  <% end %>
+</ul>
+
 
