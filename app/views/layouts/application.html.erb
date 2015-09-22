@@ -7,11 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
+  <header id='top'>
     <h1>Bloggy Blogg world! </h1>
 
     <nav>
-      <!-- <a href="/students">Students</a> -->
+      <a href="/posts"><h3>Main</h3></a>
       <!-- <a href="/courses">Courses</a> -->
     </nav>
   </header>
@@ -19,12 +19,14 @@
     <%= yield %>
   </main>
   <footer>
+  <a href='#top'>go to top</a>
     <p>
     Built by these hands
     </p>
     <p>
     <small>Accessed  <%= Time.now.strftime("at %I:%M%p") %> </small>
     </p>
+
   </footer>
 </body>
 </html>

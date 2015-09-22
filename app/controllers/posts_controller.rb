@@ -4,11 +4,11 @@ class PostsController < ApplicationController
   end
 
   def show
+
     render template: 'posts/show.html.erb', locals: { posts: Post.find(params[:id])}
-  end
-
-  def create
 
 
   end
+
+
 end

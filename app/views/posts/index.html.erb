@@ -1,14 +1,10 @@
-<section class='students'>
+<section class='posts'>
   <h2>Current Blog posts:</h2>
   <% posts.each do |posts| %>
-    <h2>
-      <%= posts.title %>
-      </h2>
-      <p>
-      <%= posts.body  %>
-      </p>
-      <p>
-      <strong>Is this published? <%= posts.published %></strong>
-   </p>
+    <a href='/posts/<%= posts.id %>'>
+    <h2> <%= posts.title %></h2>
+    </a>
+    <p><%= posts.body  %></p>
+    <p><strong>Is this published? <%= posts.published %></strong></p>
   <% end %>
 </section>
