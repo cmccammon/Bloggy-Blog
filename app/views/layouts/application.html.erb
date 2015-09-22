@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StudentTracker</title>
+  <title>Awesome Blogger</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -21,6 +21,9 @@
   <footer>
     <p>
     Built by these hands
+    </p>
+    <p>
+    <small>Accessed  <%= Time.now.strftime("at %I:%M%p") %> </small>
     </p>
   </footer>
 </body>
