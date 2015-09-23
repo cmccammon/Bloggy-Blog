@@ -8,5 +8,12 @@
     <li><%= com.message %></li>
   <% end %>
 </ul>
+<section class ='add_comment'>
+  <%= form_for(comment) do |f| %>
+    <p><%= f.label :comment %></p>
+    <p><%= f.text_area :message %></p>
+    <%= f.submit %>
+  <% end %>
+</section>
 
 
