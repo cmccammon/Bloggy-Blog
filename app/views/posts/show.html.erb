@@ -1,5 +1,6 @@
 <h3><%= posts.title %></h3>
 <p><%= posts.body %></p>
+
 <strong>
   Comments:
 </strong>
@@ -10,9 +11,9 @@
 </ul>
 <section class ='add_comment'>
   <%= form_for(comment) do |f| %>
+  <%= f.hidden_field :post_id, :value => params[:id] %>
 
 
-    <p><%= f.label :message %></p>
     <p><%= f.text_area :message %></p>
     <%= f.submit "Post Comment"%>
   <% end %>

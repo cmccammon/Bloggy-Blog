@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def show
     post_title = Post.all.map { |u| [u.title, u.id] }
     render template: 'posts/show.html.erb', locals: { posts: Post.find(params[:id]), comment: Comment.new, post_title: post_title}
+
   end
 
   def new
