@@ -10,9 +10,11 @@
 </ul>
 <section class ='add_comment'>
   <%= form_for(comment) do |f| %>
-    <p><%= f.label :comment %></p>
+
+
+    <p><%= f.label :message %></p>
     <p><%= f.text_area :message %></p>
-    <%= f.submit %>
+    <%= f.submit "Post Comment"%>
   <% end %>
 </section>
 

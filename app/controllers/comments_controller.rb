@@ -1,19 +1,18 @@
 class CommentsController < ApplicationController
 
-def show
-  render template: 'comments/show.html.erb', locals: { comment: Comment.find(params[:id])}
-end
 
-def new
-  render template: 'comments/new.html.erb', locals: { comment: Comment.new}
-end
-
-def create
-  comment = Comment.new
+ def create
+    comment = Comment.new
     comment.message   = params.fetch(:comment).fetch(:message)
+    comment.post_id = params.fetch(:comment).fetch(:post_id)
     comment.save
-
-end
+    #   flash[:notice] = 'Comment was successfully created.'
+    redirect_to posts_path
+    # else
+    #   flash[:notice] = "Error creating comment: #{comment.errors}"
+    #   redirect_to(comment.post)
+    # end
+ end
 
 
 end
