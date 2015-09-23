@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    render locals: { posts: Post.all}
+    render locals: { posts: Post.all.order('id DESC') }
   end
 
   def show
