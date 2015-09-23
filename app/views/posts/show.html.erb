@@ -1,14 +1,19 @@
-<h3><%= posts.title %></h3>
-<p><%= posts.body %></p>
 
-<strong>
-  Comments:
-</strong>
-<ul>
-  <% posts.comments.each do |this| %>
-    <li><%= this.message %></li>
-  <% end %>
-</ul>
+<section class='show_post'>
+  <h3><%= posts.title %></h3>
+  <p><%= posts.body %></p>
+</section>
+
+<section Class='comments'>
+  <strong>
+    Comments:
+  </strong>
+    <ul>
+      <% posts.comments.each do |this| %>
+        <li><%= this.message %></li>
+      <% end %>
+    </ul>
+  </section>
 <section class ='add_comment'>
   <%= form_for(comment) do |f| %>
   <%= f.hidden_field :post_id, :value => params[:id] %>

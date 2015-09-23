@@ -1,15 +1,16 @@
 
 <h2>New Bloggy post</h2>
 
-
+<section class='new_post'>
 <%= form_for(posts) do |f| %>
   <p>
     <%= f.label :title %>
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :body %>
+    <%= f.label :post %>
     <%= f.text_area :body %>
   </p>
   <%= f.submit %>
 <% end %>
+</section>
