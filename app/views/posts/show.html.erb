@@ -5,17 +5,15 @@
   Comments:
 </strong>
 <ul>
-  <% posts.comments.each do |com| %>
-    <li><%= com.message %></li>
+  <% posts.comments.each do |this| %>
+    <li><%= this.message %></li>
   <% end %>
 </ul>
 <section class ='add_comment'>
   <%= form_for(comment) do |f| %>
   <%= f.hidden_field :post_id, :value => params[:id] %>
-
-
-    <p><%= f.text_area :message %></p>
-    <%= f.submit "Post Comment"%>
+  <p><%= f.text_area :message %></p>
+  <%= f.submit "Post Comment"%>
   <% end %>
 </section>
 
